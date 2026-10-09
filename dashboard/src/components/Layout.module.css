@@ -1,0 +1,254 @@
+.shell {
+  min-height: 100vh;
+  min-height: 100dvh;
+  background: var(--background);
+}
+
+.navbar {
+  position: sticky;
+  z-index: 20;
+  top: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  min-height: 4rem;
+  height: auto;
+  padding: 0.65rem 1.5rem;
+  padding-top: max(0.65rem, env(safe-area-inset-top));
+  border-bottom: 1px solid rgb(15 23 42 / 20%);
+  color: #e2e8f0;
+  background: linear-gradient(90deg, #0f172a, #1e293b);
+}
+
+.menuButton {
+  display: none;
+  width: 2.75rem;
+  height: 2.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  color: var(--text-primary);
+  background: var(--surface);
+  cursor: pointer;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  color: #f8fafc;
+  font-weight: 750;
+}
+
+.brandMark {
+  display: grid;
+  width: 2rem;
+  height: 2rem;
+  place-items: center;
+  border-radius: 0.55rem;
+  color: #fff;
+  background: var(--accent);
+  font-size: 0.75rem;
+  letter-spacing: 0.04em;
+}
+
+.environment {
+  margin-left: auto;
+  color: #94a3b8;
+  font-size: 0.82rem;
+}
+
+.session {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  margin-left: auto;
+}
+
+.connectionStatus {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: 0.2rem 0.55rem;
+  border-radius: 999px;
+  background: var(--surface-subtle);
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+}
+
+.userName {
+  color: #f8fafc;
+  font-weight: 700;
+}
+
+.userRole {
+  padding: 0.2rem 0.5rem;
+  border-radius: 999px;
+  color: var(--accent);
+  background: var(--accent-subtle);
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.logoutButton {
+  min-height: 2.75rem;
+  padding: 0.4rem 0.75rem;
+  border: 1px solid rgb(148 163 184 / 35%);
+  border-radius: 0.5rem;
+  color: #f8fafc;
+  background: rgb(255 255 255 / 8%);
+  cursor: pointer;
+}
+
+.body {
+  display: grid;
+  grid-template-columns: 15rem minmax(0, 1fr);
+  min-height: calc(100vh - 4rem);
+}
+
+.sidebar {
+  padding: 1.5rem 1rem;
+  border-right: 1px solid #0b1220;
+  background: #0f172a;
+}
+
+.navigation {
+  display: grid;
+  gap: 0.4rem;
+}
+
+.navGroup {
+  display: grid;
+  gap: 0.2rem;
+  margin-top: 0.35rem;
+}
+
+.navGroupLabel {
+  margin: 0.35rem 0.9rem 0.15rem;
+  color: #64748b;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.navGroup .navLink {
+  padding-left: 1.35rem;
+  font-size: 0.85rem;
+}
+
+.navLink {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  min-height: 2.75rem;
+  padding: 0.75rem 0.9rem;
+  border-radius: 0.6rem;
+  color: #94a3b8;
+  font-size: 0.9rem;
+  font-weight: 650;
+  text-decoration: none;
+}
+
+.navLink:hover {
+  color: #f8fafc;
+  background: #1e293b;
+}
+
+.active {
+  color: #fff;
+  background: #1d4ed8;
+}
+
+.main {
+  width: 100%;
+  max-width: 90rem;
+  margin: 0 auto;
+  padding: clamp(1.25rem, 3vw, 2.5rem);
+  padding-bottom: max(clamp(1.25rem, 3vw, 2.5rem), env(safe-area-inset-bottom));
+  overflow: auto;
+}
+
+.quickActions {
+  display: none;
+}
+
+.pullHint {
+  display: none;
+}
+
+.backdrop {
+  display: none;
+}
+
+@media (max-width: 900px) {
+  .menuButton {
+    display: grid;
+    place-items: center;
+  }
+
+  .environment {
+    display: none;
+  }
+
+  .body {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    position: fixed;
+    z-index: 15;
+    top: 4rem;
+    bottom: 0;
+    left: 0;
+    width: min(16rem, 86vw);
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+  }
+
+  .sidebarOpen {
+    transform: translateX(0);
+  }
+
+  .backdrop {
+    display: block;
+    position: fixed;
+    z-index: 14;
+    inset: 4rem 0 0;
+    border: 0;
+    background: rgb(15 23 42 / 35%);
+    cursor: pointer;
+  }
+
+  .quickActions {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .quickActions a {
+    display: grid;
+    place-items: center;
+    min-height: 2.75rem;
+    padding: 0.45rem;
+    border: 1px solid var(--border);
+    border-radius: 0.7rem;
+    background: var(--surface);
+    color: var(--text-primary);
+    font-size: 0.78rem;
+    font-weight: 750;
+    text-align: center;
+    text-decoration: none;
+  }
+
+  .pullHint {
+    display: block;
+    margin: 0 0 0.75rem;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}

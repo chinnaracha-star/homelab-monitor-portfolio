@@ -1,0 +1,14 @@
+[
+  {"url": "https://example.com", "accept": true, "reason": null},
+  {"url": "https://monitor.example.com", "accept": true, "reason": null},
+  {"url": "http://dashboard:8080", "accept": false, "reason": "internal_docker_host"},
+  {"url": "http://localhost", "accept": false, "reason": "loopback"},
+  {"url": "http://127.0.0.1", "accept": false, "reason": "loopback"},
+  {"url": "ftp://example.com", "accept": false, "reason": "missing_http_scheme"},
+  {"url": "https://server.local", "accept": false, "reason": "private_only_tld"},
+  {"url": "http://api:8000", "accept": false, "reason": "internal_docker_host"},
+  {"url": "http://0.0.0.0", "accept": false, "reason": "loopback"},
+  {"url": "https://dashboard.internal", "accept": false, "reason": "private_only_tld"},
+  {"url": "file://tmp/page.html", "accept": false, "reason": "missing_http_scheme"},
+  {"url": "ws://example.com/socket", "accept": false, "reason": "missing_http_scheme"}
+]

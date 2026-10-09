@@ -1,0 +1,1 @@
+{"id":"example-ups","name":"UPS","version":"0.1.0","author":"HomeLab Monitor","description":"Sample UPS adapter. Documentation only.","capabilities":["power","read"],"builtin":false,"production":false}

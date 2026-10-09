@@ -1,0 +1,1 @@
+Runtime: existing FastAPI lifespan, SQLite, and agent report path. This plugin does not start a second API.

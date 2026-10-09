@@ -1,0 +1,20 @@
+{
+  "report_interval_seconds": 60,
+  "modules": {
+    "system": {
+      "enabled": true,
+      "disk_warning_percent": 80,
+      "disk_critical_percent": 90
+    },
+    "docker": {
+      "enabled": true
+    },
+    "immich": {
+      "enabled": false,
+      "url": "http://immich-server:2283"
+    },
+    "qnap": {
+      "enabled": false
+    }
+  }
+}

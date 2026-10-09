@@ -1,0 +1,119 @@
+.toolbarRow {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: end;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.toast {
+  margin: 0;
+  padding: 0.85rem 1rem;
+  border: 1px solid #a7f3d0;
+  border-radius: 0.75rem;
+  color: #047857;
+  background: #ecfdf5;
+  font-weight: 700;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.actionButton,
+.primaryButton,
+.secondaryButton,
+.dangerButton {
+  min-height: 2.75rem;
+  padding: 0.4rem 0.7rem;
+  border-radius: 0.5rem;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.actionButton,
+.secondaryButton {
+  border: 1px solid var(--border);
+  color: var(--text-primary);
+  background: var(--surface);
+}
+
+.primaryButton {
+  border: 0;
+  color: #fff;
+  background: var(--accent);
+}
+
+.dangerButton {
+  border: 0;
+  color: #fff;
+  background: #b91c1c;
+}
+
+.dialog {
+  width: min(100%, 28rem);
+  padding: 1.5rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.wideDialog {
+  width: min(100%, 36rem);
+}
+
+.dialog::backdrop {
+  background: rgb(15 23 42 / 45%);
+}
+
+.dialogTitle {
+  margin: 0 0 1rem;
+  font-size: 1.25rem;
+}
+
+.dialogMessage {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.form {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.label {
+  display: grid;
+  gap: 0.35rem;
+  color: var(--text-muted);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.input {
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 0.55rem;
+  background: #fff;
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: var(--text-primary);
+  font-weight: 650;
+}
+
+.dialogActions {
+  display: flex;
+  justify-content: end;
+  gap: 0.6rem;
+}
+
+.formError {
+  margin: 0;
+  color: #991b1b;
+}

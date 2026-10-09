@@ -1,0 +1,1 @@
+{"id":"example-weather","name":"Weather","version":"0.1.0","author":"HomeLab Monitor","description":"Sample weather adapter. Documentation only.","capabilities":["weather","read"],"builtin":false,"production":false}

@@ -1,0 +1,32 @@
+[Unit]
+Description=HomeLab Monitor API
+Documentation=file:///opt/homelab-monitor/docs/deployment.md
+Wants=network-online.target
+After=network-online.target
+
+[Service]
+Type=simple
+User=homelab-monitor
+Group=homelab-monitor
+WorkingDirectory=/opt/homelab-monitor
+EnvironmentFile=/etc/homelab-monitor/api.env
+ExecStartPre=/opt/homelab-monitor/.venv/bin/alembic upgrade head
+ExecStart=/opt/homelab-monitor/.venv/bin/uvicorn homelab_monitor.main:app --host 127.0.0.1 --port 8000 --proxy-headers --forwarded-allow-ips=127.0.0.1
+Restart=unless-stopped
+RestartSec=5s
+TimeoutStopSec=30s
+StateDirectory=homelab-monitor
+LogsDirectory=homelab-monitor
+UMask=0077
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+RestrictSUIDSGID=true
+ReadWritePaths=/var/lib/homelab-monitor /var/log/homelab-monitor
+
+[Install]
+WantedBy=multi-user.target

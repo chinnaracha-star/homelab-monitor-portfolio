@@ -1,0 +1,165 @@
+.scoreCard {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.score {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(2.5rem, 8vw, 4.5rem);
+  font-weight: 850;
+  line-height: 1;
+}
+
+.scoreLabel,
+.meta,
+.diagnostic p {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.healthGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr));
+  gap: 1rem;
+}
+
+.healthCard,
+.detailCard,
+.diagnostic {
+  display: grid;
+  gap: 0.65rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+}
+
+.healthHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.healthHeader h2,
+.healthHeader h3,
+.sectionTitle,
+.detailCard h3,
+.diagnostic h3 {
+  margin: 0;
+  color: var(--text-primary);
+}
+
+.detailsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  gap: 1rem;
+}
+
+.detailList {
+  display: grid;
+  gap: 0.55rem;
+  margin: 0;
+}
+
+.detailList div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.45rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.detailList dt {
+  color: var(--text-muted);
+}
+
+.detailList dd {
+  margin: 0;
+  overflow-wrap: anywhere;
+  color: var(--text-primary);
+  font-weight: 700;
+  text-align: right;
+}
+
+.tableWrap {
+  overflow-x: auto;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+}
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  padding: 0.8rem 1rem;
+  border-bottom: 1px solid var(--border);
+  color: var(--text-primary);
+  text-align: left;
+  white-space: nowrap;
+}
+
+.table th {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  text-transform: uppercase;
+}
+
+.diagnostics {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.diagnostic {
+  border-left: 0.3rem solid #d97706;
+}
+
+.diagnostic strong {
+  color: var(--text-primary);
+}
+
+@media (max-width: 720px) {
+  .scoreCard,
+  .detailList div {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .detailList dd {
+    text-align: left;
+  }
+}
+
+.opsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(12rem, 1fr));
+  gap: 0.75rem;
+}
+
+.opButton {
+  padding: 0.75rem 1rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+  background: var(--surface);
+  color: var(--text-primary);
+  font: inherit;
+  cursor: pointer;
+}
+
+.opButton:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}

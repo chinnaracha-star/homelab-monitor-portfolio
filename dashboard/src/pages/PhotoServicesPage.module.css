@@ -1,0 +1,117 @@
+.statsSection {
+  display: grid;
+  gap: 1rem;
+}
+
+.statNote {
+  display: grid;
+  gap: 0.6rem;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.statNoteLabel {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.statNoteValue {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.meterLabel {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.storageMeter {
+  width: 100%;
+  height: 1.15rem;
+}
+
+.trendGrid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.trendCard {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.35rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.trendTitle {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.trendEyebrow {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.periodList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.periodRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.periodRow dt {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.periodRow dd {
+  margin: 0;
+  font-weight: 750;
+}
+
+@media (max-width: 1050px) {
+  .statsSection {
+    gap: 0.85rem;
+  }
+
+  .trendGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 720px) {
+  .statNoteValue {
+    font-size: 1.15rem;
+  }
+
+  .trendGrid {
+    grid-template-columns: 1fr;
+  }
+}

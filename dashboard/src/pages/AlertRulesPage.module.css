@@ -1,0 +1,61 @@
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  align-items: end;
+}
+
+.preview {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.badgeRow {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.4rem;
+}
+
+.metricBadge,
+.severityBadge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.55rem;
+  border-radius: 999px;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+.metricBadge {
+  color: #1d4ed8;
+  background: #dbeafe;
+}
+
+.critical {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+.high {
+  color: #c2410c;
+  background: #ffedd5;
+}
+
+.medium {
+  color: #a16207;
+  background: #fef3c7;
+}
+
+.low {
+  color: #047857;
+  background: #d1fae5;
+}
+
+@media (max-width: 720px) {
+  .filters {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

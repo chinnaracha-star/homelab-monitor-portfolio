@@ -1,0 +1,86 @@
+.cardGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.card {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-radius: 0.9rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.cardTitle {
+  margin: 0;
+  font-size: 1.05rem;
+}
+
+.cardValue {
+  margin: 0;
+  color: var(--text-primary);
+  font-size: clamp(1.15rem, 2.4vw, 1.7rem);
+  font-weight: 750;
+  overflow-wrap: anywhere;
+}
+
+.cardMeta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.meterLabel {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.progressMeter {
+  width: 100%;
+  height: 1.15rem;
+}
+
+.periodList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+}
+
+.periodRow {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  align-items: baseline;
+}
+
+.periodRow dt {
+  margin: 0;
+  color: var(--text-muted);
+}
+
+.periodRow dd {
+  margin: 0;
+  font-weight: 750;
+}
+
+.retryRow {
+  display: flex;
+}
+
+@media (max-width: 1050px) {
+  .cardGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .cardGrid {
+    grid-template-columns: 1fr;
+  }
+}

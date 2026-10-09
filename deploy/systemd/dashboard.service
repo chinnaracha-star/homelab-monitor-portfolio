@@ -1,0 +1,23 @@
+[Unit]
+Description=HomeLab Monitor dashboard (nginx)
+Documentation=file:///opt/homelab-monitor/docs/nginx.md
+Wants=network-online.target
+After=network-online.target homelab-monitor-api.service
+Requires=homelab-monitor-api.service
+
+[Service]
+Type=simple
+ExecStart=/usr/sbin/nginx -c /etc/homelab-monitor/nginx.conf -g "daemon off;"
+ExecReload=/usr/sbin/nginx -c /etc/homelab-monitor/nginx.conf -s reload
+Restart=unless-stopped
+RestartSec=5s
+TimeoutStopSec=15s
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectHome=true
+ProtectSystem=strict
+ReadOnlyPaths=/var/www/homelab-monitor /etc/homelab-monitor
+ReadWritePaths=/var/log/nginx /run
+
+[Install]
+WantedBy=multi-user.target

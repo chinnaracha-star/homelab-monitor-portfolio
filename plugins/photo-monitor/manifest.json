@@ -1,0 +1,1 @@
+{"id":"photo-monitor","name":"Photo Monitor","version":"1.0.0-rc3","author":"HomeLab Monitor","description":"Adapter for CIFS photo watcher.","capabilities":["photos"],"builtin":true}

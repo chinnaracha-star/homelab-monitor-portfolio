@@ -1,0 +1,1 @@
+{"id":"backup","name":"Backup","version":"1.0.0-rc3","author":"HomeLab Monitor","description":"Adapter for gzip SQLite backups.","capabilities":["backup"],"builtin":true}

@@ -1,0 +1,1 @@
+{"id":"telegram","name":"Telegram","version":"1.0.0-rc3","author":"HomeLab Monitor","description":"Adapter for TelegramNotifier and report dispatcher.","capabilities":["notify"],"builtin":true}

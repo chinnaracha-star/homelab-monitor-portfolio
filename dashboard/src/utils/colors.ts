@@ -1,0 +1,26 @@
+export const SERVICE_COLORS = {
+  qnap: '#16a34a',
+  docker: '#2563eb',
+  immich: '#7c3aed',
+  qumagie: '#4f46e5',
+  backup: '#06b6d4',
+  storage: '#059669',
+  cpu: '#2563eb',
+  memory: '#7c3aed',
+  temperature: '#ea580c',
+  photos: '#7c3aed',
+  alerts: '#dc2626',
+  healthy: '#16a34a',
+  warning: '#ca8a04',
+  unknown: '#64748b',
+  offline: '#dc2626',
+  online: '#16a34a',
+  agent: '#0f766e',
+  analytics: '#2563eb',
+  trends: '#4f46e5',
+  capacity: '#059669',
+  insights: '#7c3aed',
+  mission: '#0f172a',
+} as const
+
+export type ServiceTone = keyof typeof SERVICE_COLORS

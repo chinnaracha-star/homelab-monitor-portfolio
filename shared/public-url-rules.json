@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "schemes": {
+    "allow": ["http", "https"]
+  },
+  "hosts": {
+    "reject_exact": [
+      "localhost",
+      "127.0.0.1",
+      "::1",
+      "0.0.0.0",
+      "[::1]",
+      "dashboard",
+      "api",
+      "nginx",
+      "postgres",
+      "redis",
+      "immich",
+      "qnap",
+      "backend",
+      "homelab-monitor-api",
+      "homelab-monitor-dashboard",
+      "host.docker.internal"
+    ],
+    "reject_prefixes": ["127."],
+    "reject_suffixes": [".local", ".internal"],
+    "reject_single_label": true,
+    "allow_exact": [],
+    "allow_suffixes": [],
+    "allow_wildcards": []
+  },
+  "overrides": {
+    "development": {},
+    "production": {}
+  }
+}

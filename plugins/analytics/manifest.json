@@ -1,0 +1,1 @@
+{"id":"analytics","name":"Analytics","version":"1.0.0-rc3","author":"HomeLab Monitor","description":"Adapter for analytics, capacity, and insights.","capabilities":["metrics"],"builtin":true}

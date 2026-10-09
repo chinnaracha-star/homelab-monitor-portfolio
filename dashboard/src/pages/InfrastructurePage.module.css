@@ -1,0 +1,162 @@
+.connectorGrid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.connectorCard {
+  display: grid;
+  gap: 0.75rem;
+  padding: 1.15rem;
+  border: 1px solid var(--border);
+  border-top: 3px solid var(--tone, var(--accent));
+  border-radius: 1rem;
+  background: var(--surface);
+  box-shadow: var(--shadow);
+}
+
+.connectorCard[data-service='qnap'] {
+  --tone: var(--color-qnap);
+}
+
+.connectorCard[data-service='docker'] {
+  --tone: var(--color-docker);
+}
+
+.connectorCard[data-service='immich'] {
+  --tone: var(--color-immich);
+}
+
+.connectorCard[data-service='qumagie'] {
+  --tone: var(--color-qumagie);
+}
+
+.connectorCard[data-service='backup'] {
+  --tone: var(--color-backup);
+}
+
+.connectorHeader {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.6rem;
+}
+
+.connectorName {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.meta {
+  margin: 0;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  white-space: pre-line;
+}
+
+.summaryList {
+  display: grid;
+  gap: 0.45rem;
+  margin: 0;
+}
+
+.summaryList div {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  gap: 0.75rem;
+}
+
+.summaryList dt {
+  color: var(--text-muted);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.summaryList dd {
+  margin: 0;
+  font-weight: 650;
+}
+
+.retryRow {
+  display: flex;
+  justify-content: start;
+}
+
+.diskHealth {
+  display: grid;
+  gap: 0.65rem;
+}
+
+.diskHeading {
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+.diskList {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.diskItem {
+  display: grid;
+  gap: 0.2rem;
+  padding: 0.75rem;
+  border: 1px solid var(--border);
+  border-radius: 0.75rem;
+}
+
+.diskName {
+  margin: 0;
+  font-weight: 700;
+}
+
+.diskTemp {
+  margin: 0;
+  font-weight: 650;
+}
+
+.diskTemp[data-temperature='normal'] {
+  color: var(--color-online, #1b7f4e);
+}
+
+.diskTemp[data-temperature='warning'] {
+  color: var(--color-warning, #b86e00);
+}
+
+.diskTemp[data-temperature='critical'] {
+  color: var(--color-critical, #b42318);
+}
+
+@media (min-width: 721px) {
+  .diskItem {
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    column-gap: 0.75rem;
+  }
+
+  .diskItem .meta,
+  .diskItem .diskTemp {
+    grid-column: auto;
+  }
+}
+
+@media (max-width: 1050px) {
+  .connectorGrid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .connectorGrid {
+    grid-template-columns: 1fr;
+  }
+}

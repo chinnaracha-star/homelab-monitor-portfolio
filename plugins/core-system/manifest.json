@@ -1,0 +1,1 @@
+{"id":"core-system","name":"Core System","version":"1.0.0-rc3","author":"HomeLab Monitor","description":"Adapter for API runtime, SQLite, and agents.","capabilities":["runtime","health"],"builtin":true}
