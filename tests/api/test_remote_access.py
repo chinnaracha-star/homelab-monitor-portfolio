@@ -28,21 +28,13 @@ DISCONNECTED_STATUS = {
 
 SERVE_HTTPS = {
     "TCP": {"443": {"HTTPS": True}},
-    "Web": {
-        "monitor.example.com:443": {
-            "Handlers": {"/": {"Proxy": "http://127.0.0.1:18081"}}
-        }
-    },
+    "Web": {"monitor.example.com:443": {"Handlers": {"/": {"Proxy": "http://127.0.0.1:18081"}}}},
     "AllowFunnel": {"monitor.example.com:443": False},
 }
 
 SERVE_HTTP_ONLY = {
     "TCP": {"80": {"HTTP": True}},
-    "Web": {
-        "monitor.example.com:80": {
-            "Handlers": {"/": {"Proxy": "http://127.0.0.1:18081"}}
-        }
-    },
+    "Web": {"monitor.example.com:80": {"Handlers": {"/": {"Proxy": "http://127.0.0.1:18081"}}}},
     "AllowFunnel": {},
 }
 

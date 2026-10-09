@@ -23,10 +23,7 @@ from homelab_monitor.telegram_url_validator import (
 
 def test_validate_public_url_accepts_https_hosts() -> None:
     assert validate_public_url("https://example.com") == "https://example.com"
-    assert (
-        validate_public_url("https://monitor.example.com")
-        == "https://monitor.example.com"
-    )
+    assert validate_public_url("https://monitor.example.com") == "https://monitor.example.com"
 
 
 def test_validate_public_url_rejects_internal_and_non_http() -> None:
