@@ -190,7 +190,10 @@ def test_photo_alert_and_report_bodies_omit_invalid_public_urls(monkeypatch) -> 
         size_bytes=10,
         created_at=datetime(2026, 9, 22, 8, 0, tzinfo=UTC),
     )
-    batch = format_new_photos_batch_message(folder="/data/photos/library-b", filenames=["a.jpg", "b.jpg"])
+    batch = format_new_photos_batch_message(
+        folder="/data/photos/library-b",
+        filenames=["a.jpg", "b.jpg"],
+    )
     assert "a.jpg" in batch
     assert "b.jpg" in batch
     assert "+1 more" not in batch
